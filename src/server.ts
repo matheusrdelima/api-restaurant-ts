@@ -1,9 +1,9 @@
 import express from 'express';
 
+import restaurantRoutes from './routes';
+
 const server = express();
 
-server.use('/', (request, response) => {
-  return response.json({ ok: true })
-});
+server.use('/', restaurantRoutes);
 
 server.listen(3333);
